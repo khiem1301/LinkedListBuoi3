@@ -96,7 +96,7 @@ public class MyLinkedList {
             return;
         } else {
             Node preNodeDelete = head; // tìm ra node tại vị trí index muốn xóa
-            for(int i = 1; i <= index; i++){
+            for(int i = 1; i < index; i++){
                 preNodeDelete = preNodeDelete.next;
             }
             preNodeDelete.next = preNodeDelete.next.next;
@@ -146,7 +146,7 @@ public class MyLinkedList {
         } else {
             Node temp = head;
             int count = 1;
-            while(count < index -1){
+            while(count < index){
                 temp = temp.next;
                 count++;
             }
